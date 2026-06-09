@@ -1,9 +1,186 @@
-<!DOCTYPE html><html><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'>
-<link rel='stylesheet' href='css/style.css'><title>SpireX Foundation</title></head><body><nav><a href='index.html'>Home</a><a href='about.html'>About</a><a href='internships.html'>Internships</a><a href='team.html'>Team</a><a href='contact.html'>Contact</a></nav>
-<div class='hero'><h1>SpireX Foundation</h1><h2>Learn • Build • Rise</h2><a class='btn' href='internships.html'>Explore Internships</a></div>
-<div class='container'><div class='grid'>
-<div class='card'><h3 data-count='100'>0</h3><p>Future Students</p></div>
-<div class='card'><h3 data-count='10'>0</h3><p>Projects</p></div>
-<div class='card'><h3 data-count='5'>0</h3><p>Programs</p></div>
-</div></div>
-<footer>SpireX Foundation • Learn • Build • Rise</footer><script src='js/script.js'></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SpireX Foundation | Learn • Build • Rise</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="logo">
+        <img src="assets/logo.png" alt="SpireX Foundation">
+    </div>
+
+    <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="internships.html">Internships</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+    <div class="hamburger" id="hamburger">
+        <i class="fas fa-bars"></i>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero">
+
+    <div class="hero-content">
+        <h1>Learn. Build. Rise.</h1>
+
+        <p>
+            Empowering students through internships,
+            real-world projects and skill development.
+        </p>
+
+        <a href="internships.html" class="btn">
+            Explore Now
+        </a>
+    </div>
+
+</section>
+
+<!-- Running Internship Notice -->
+<section class="notice-section">
+
+<div class="notice">
+<marquee>
+🚀 Current Batch: Front-End Development Internship (July Batch) | Registrations Open | Remote Internship Program
+</marquee>
+</div>
+
+</section>
+
+<!-- Statistics -->
+<section class="stats">
+
+<div class="card">
+<h2 class="counter" data-target="50">0</h2>
+<p>Students Trained</p>
+</div>
+
+<div class="card">
+<h2 class="counter" data-target="10">0</h2>
+<p>Projects Completed</p>
+</div>
+
+<div class="card">
+<h2 class="counter" data-target="5">0</h2>
+<p>Workshops Conducted</p>
+</div>
+
+</section>
+
+<!-- Part Time Opportunity -->
+<section class="opportunity">
+
+<h2>Build Your Future With Us</h2>
+
+<p>
+Gain practical experience through project-based learning,
+internships and community collaboration.
+</p>
+
+<div class="growth-box">
+<h1>📈 Growing Community</h1>
+<p>
+Join students who are learning web development,
+building portfolios and preparing for their careers.
+</p>
+</div>
+
+</section>
+
+<!-- Footer -->
+
+<footer>
+
+<div class="footer-container">
+
+<div>
+<h3>SpireX Foundation</h3>
+<p>Learn • Build • Rise</p>
+</div>
+
+<div>
+<h3>Quick Links</h3>
+<a href="about.html">About</a><br>
+<a href="internships.html">Internships</a><br>
+<a href="team.html">Team</a><br>
+<a href="contact.html">Contact</a>
+</div>
+
+<div>
+<h3>Contact</h3>
+<p>contact.spirexfoundation@gmail.com</p>
+</div>
+
+</div>
+
+<p class="copyright">
+© 2026 SpireX Foundation. All Rights Reserved.
+</p>
+
+</footer>
+
+<script>
+
+const hamburger =
+document.getElementById('hamburger');
+
+const navLinks =
+document.getElementById('navLinks');
+
+hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});
+
+const counters =
+document.querySelectorAll('.counter');
+
+counters.forEach(counter => {
+
+const updateCounter = () => {
+
+const target =
++counter.getAttribute('data-target');
+
+const count =
++counter.innerText;
+
+const increment =
+target / 100;
+
+if(count < target){
+
+counter.innerText =
+Math.ceil(count + increment);
+
+setTimeout(updateCounter,20);
+
+}else{
+
+counter.innerText = target;
+
+}
+
+};
+
+updateCounter();
+
+});
+
+</script>
+
+</body>
+</html>
