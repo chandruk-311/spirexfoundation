@@ -1,186 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SpireX Foundation | Learn • Build • Rise</title>
-
-<link rel="stylesheet" href="style.css">
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SpireX Foundation | Home</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="bg-gradient-to-r from-purple-700 to-cyan-500 text-white">
 
-<!-- Navbar -->
-<nav class="navbar">
-    <div class="logo">
-        <img src="assets/logo.png" alt="SpireX Foundation">
+  <!-- Navbar -->
+  <header class="fixed w-full bg-white/30 backdrop-blur-md shadow-md z-50">
+    <div class="container mx-auto flex justify-between items-center p-4">
+      <a href="index.html"><img src="assets/logo.png" alt="SpireX Logo" class="h-10"></a>
+      <nav>
+        <ul class="hidden md:flex space-x-6 text-purple-700 font-semibold">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="internships.html">Internships</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <button id="menu-btn" class="md:hidden text-purple-700">☰</button>
+      </nav>
     </div>
-
-    <ul class="nav-links" id="navLinks">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="internships.html">Internships</a></li>
-        <li><a href="team.html">Team</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
-
-    <div class="hamburger" id="hamburger">
-        <i class="fas fa-bars"></i>
+    <div id="mobile-menu" class="hidden bg-white/90 backdrop-blur-md p-4">
+      <a href="index.html" class="block py-2">Home</a>
+      <a href="about.html" class="block py-2">About</a>
+      <a href="internships.html" class="block py-2">Internships</a>
+      <a href="team.html" class="block py-2">Team</a>
+      <a href="contact.html" class="block py-2">Contact</a>
     </div>
-</nav>
+  </header>
 
-<!-- Hero Section -->
-<section class="hero">
+  <!-- Hero -->
+  <section class="h-screen flex flex-col justify-center items-center text-center">
+    <img src="assets/logo.png" alt="SpireX Logo" class="h-20 mb-4">
+    <h1 class="text-4xl font-bold">Learn • Build • Rise</h1>
+    <a href="about.html" class="mt-6 px-6 py-3 bg-white text-purple-700 rounded-lg shadow-lg hover:scale-105 transition">Explore Now</a>
+  </section>
 
-    <div class="hero-content">
-        <h1>Learn. Build. Rise.</h1>
+  <!-- Internship Banner -->
+  <section class="bg-white/20 backdrop-blur-md py-4 text-center">
+    <marquee>🚀 Current Internship Batch: July 2026 | Front-End Development 🚀</marquee>
+  </section>
 
-        <p>
-            Empowering students through internships,
-            real-world projects and skill development.
-        </p>
+  <!-- Statistics -->
+  <section class="grid md:grid-cols-3 gap-6 text-center p-10">
+    <div><h2 class="text-5xl font-bold counter" data-target="500">0</h2><p>Students</p></div>
+    <div><h2 class="text-5xl font-bold counter" data-target="50">0</h2><p>Mentors</p></div>
+    <div><h2 class="text-5xl font-bold counter" data-target="20">0</h2><p>Projects</p></div>
+  </section>
 
-        <a href="internships.html" class="btn">
-            Explore Now
-        </a>
+  <!-- Community -->
+  <section class="p-10 text-center">
+    <h2 class="text-3xl font-bold">Growing Community</h2>
+    <p class="mt-4">Join thousands of learners building their future with SpireX Foundation.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-purple-700 text-white mt-10 p-6">
+    <div class="container mx-auto grid md:grid-cols-3 gap-6">
+      <div>
+        <h3 class="font-bold text-lg">Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="internships.html">Internships</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-bold text-lg">Email</h3>
+        <p>contact.spirexfoundation@gmail.com</p>
+      </div>
+      <div>
+        <h3 class="font-bold text-lg">Copyright</h3>
+        <p>© 2026 SpireX Foundation. All rights reserved.</p>
+      </div>
     </div>
+  </footer>
 
-</section>
-
-<!-- Running Internship Notice -->
-<section class="notice-section">
-
-<div class="notice">
-<marquee>
-🚀 Current Batch: Front-End Development Internship (July Batch) | Registrations Open | Remote Internship Program
-</marquee>
-</div>
-
-</section>
-
-<!-- Statistics -->
-<section class="stats">
-
-<div class="card">
-<h2 class="counter" data-target="50">0</h2>
-<p>Students Trained</p>
-</div>
-
-<div class="card">
-<h2 class="counter" data-target="10">0</h2>
-<p>Projects Completed</p>
-</div>
-
-<div class="card">
-<h2 class="counter" data-target="5">0</h2>
-<p>Workshops Conducted</p>
-</div>
-
-</section>
-
-<!-- Part Time Opportunity -->
-<section class="opportunity">
-
-<h2>Build Your Future With Us</h2>
-
-<p>
-Gain practical experience through project-based learning,
-internships and community collaboration.
-</p>
-
-<div class="growth-box">
-<h1>📈 Growing Community</h1>
-<p>
-Join students who are learning web development,
-building portfolios and preparing for their careers.
-</p>
-</div>
-
-</section>
-
-<!-- Footer -->
-
-<footer>
-
-<div class="footer-container">
-
-<div>
-<h3>SpireX Foundation</h3>
-<p>Learn • Build • Rise</p>
-</div>
-
-<div>
-<h3>Quick Links</h3>
-<a href="about.html">About</a><br>
-<a href="internships.html">Internships</a><br>
-<a href="team.html">Team</a><br>
-<a href="contact.html">Contact</a>
-</div>
-
-<div>
-<h3>Contact</h3>
-<p>contact.spirexfoundation@gmail.com</p>
-</div>
-
-</div>
-
-<p class="copyright">
-© 2026 SpireX Foundation. All Rights Reserved.
-</p>
-
-</footer>
-
-<script>
-
-const hamburger =
-document.getElementById('hamburger');
-
-const navLinks =
-document.getElementById('navLinks');
-
-hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-});
-
-const counters =
-document.querySelectorAll('.counter');
-
-counters.forEach(counter => {
-
-const updateCounter = () => {
-
-const target =
-+counter.getAttribute('data-target');
-
-const count =
-+counter.innerText;
-
-const increment =
-target / 100;
-
-if(count < target){
-
-counter.innerText =
-Math.ceil(count + increment);
-
-setTimeout(updateCounter,20);
-
-}else{
-
-counter.innerText = target;
-
-}
-
-};
-
-updateCounter();
-
-});
-
-</script>
-
+  <script src="script.js"></script>
 </body>
 </html>
