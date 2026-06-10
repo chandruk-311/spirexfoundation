@@ -1,276 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Internships | SpireX Foundation</title>
-
-<link rel="stylesheet" href="style.css">
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SpireX Foundation — Internships</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css" />
 </head>
+<body class="min-h-screen bg-gradient-to-br from-[#7C3AED] to-[#06B6D4] text-white antialiased">
 
-<body>
+  <!-- NAVBAR -->
+  <header class="fixed w-full z-50 bg-white/20 backdrop-blur-md shadow">
+    <div class="container mx-auto flex items-center justify-between p-4">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="assets/logo.png" alt="SpireX Foundation" class="h-10 w-auto" />
+        <span class="font-semibold text-purple-900">SpireX Foundation</span>
+      </a>
 
-<!-- NAVBAR -->
+      <nav class="hidden md:flex items-center gap-6 text-purple-900 font-medium">
+        <a href="index.html" class="hover:underline">Home</a>
+        <a href="about.html" class="hover:underline">About</a>
+        <a href="internships.html" class="underline decoration-cyan-300">Internships</a>
+        <a href="team.html" class="hover:underline">Team</a>
+        <a href="contact.html" class="hover:underline">Contact</a>
+      </nav>
 
-<nav class="navbar">
-
-    <div class="logo">
-        <img src="assets/logo.png" alt="SpireX Foundation">
+      <button id="menu-btn" class="md:hidden text-purple-900 text-2xl">☰</button>
     </div>
 
-    <ul class="nav-links" id="navLinks">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="internships.html" class="active">Internships</a></li>
-        <li><a href="team.html">Team</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
-
-    <div class="hamburger" id="hamburger">
-        <i class="fas fa-bars"></i>
+    <div id="mobile-menu" class="hidden bg-white/90 backdrop-blur p-4">
+      <a href="index.html" class="block py-2 text-purple-900">Home</a>
+      <a href="about.html" class="block py-2 text-purple-900">About</a>
+      <a href="internships.html" class="block py-2 text-purple-900">Internships</a>
+      <a href="team.html" class="block py-2 text-purple-900">Team</a>
+      <a href="contact.html" class="block py-2 text-purple-900">Contact</a>
     </div>
+  </header>
 
-</nav>
+  <main class="pt-28">
 
-<!-- HERO SECTION -->
+    <!-- HERO / SEARCH STYLE -->
+    <section class="container mx-auto px-6 py-10">
+      <div class="glass p-6">
+        <h1 class="text-3xl md:text-4xl font-bold text-purple-900">Find Internships</h1>
+        <p class="mt-2 text-white/90">Browse current internship opportunities and apply to build real projects with mentors.</p>
 
-<section class="internship-hero">
-
-    <h1>Internship Programs</h1>
-
-    <p>
-        Gain practical experience through project-based
-        learning and real-world web development projects.
-    </p>
-
-</section>
-
-<!-- CURRENT PROGRAM -->
-
-<section class="program-section">
-
-    <h2>Current Internship Program</h2>
-
-    <div class="program-card">
-
-        <div class="program-badge">
-            Applications Open
+        <div class="mt-6 grid md:grid-cols-3 gap-4">
+          <input type="text" placeholder="Search by role or skill (e.g., Front-End)" class="p-3 rounded-lg text-black md:col-span-2" />
+          <select class="p-3 rounded-lg text-black">
+            <option>All Durations</option>
+            <option>1 month</option>
+            <option>2 months</option>
+          </select>
         </div>
+      </div>
+    </section>
 
-        <h3>Front-End Development Internship</h3>
+    <!-- INTERNSHIP LISTINGS -->
+    <section class="container mx-auto px-6 py-6">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-        <p class="duration">
-            📅 Duration: July 1 - July 30
-        </p>
+        <!-- Card 1 -->
+        <article class="glass p-6 hover:shadow-xl transition">
+          <div class="flex items-start justify-between">
+            <h3 class="text-xl font-semibold text-purple-900">Front-End Development Internship</h3>
+            <span class="text-sm bg-white/20 px-2 py-1 rounded text-white">Remote</span>
+          </div>
+          <p class="mt-3 text-white/90">Duration: July 1 – July 30</p>
+          <p class="mt-2 text-white/90"><strong>Skills:</strong> HTML, CSS, JavaScript, GitHub</p>
+          <ul class="mt-3 text-sm text-white/90 list-disc list-inside space-y-1">
+            <li>Internship Certificate</li>
+            <li>Real-Time Projects</li>
+            <li>Mentor Support</li>
+            <li>Portfolio Development</li>
+          </ul>
+          <div class="mt-4 flex items-center justify-between">
+            <a href="https://forms.gle/your-google-form-link" target="_blank" class="px-4 py-2 bg-[#7C3AED] text-white rounded-lg shadow">Apply Now</a>
+            <a href="#" class="text-sm text-white/80 underline">View details</a>
+          </div>
+        </article>
 
-        <p>
-            This internship is designed for students who
-            want to learn modern web development through
-            hands-on projects and practical experience.
-        </p>
+        <!-- Card 2 (example) -->
+        <article class="glass p-6 hover:shadow-xl transition">
+          <div class="flex items-start justify-between">
+            <h3 class="text-xl font-semibold text-purple-900">UI/UX Internship</h3>
+            <span class="text-sm bg-white/20 px-2 py-1 rounded text-white">Hybrid</span>
+          </div>
+          <p class="mt-3 text-white/90">Duration: July 5 – August 5</p>
+          <p class="mt-2 text-white/90"><strong>Skills:</strong> Figma, Design Thinking</p>
+          <ul class="mt-3 text-sm text-white/90 list-disc list-inside space-y-1">
+            <li>Design mentorship</li>
+            <li>Project-based learning</li>
+          </ul>
+          <div class="mt-4 flex items-center justify-between">
+            <a href="https://forms.gle/your-google-form-link" target="_blank" class="px-4 py-2 bg-[#7C3AED] text-white rounded-lg shadow">Apply Now</a>
+            <a href="#" class="text-sm text-white/80 underline">View details</a>
+          </div>
+        </article>
 
-        <div class="skills">
+        <!-- Card 3 (example) -->
+        <article class="glass p-6 hover:shadow-xl transition">
+          <div class="flex items-start justify-between">
+            <h3 class="text-xl font-semibold text-purple-900">Backend Fundamentals Internship</h3>
+            <span class="text-sm bg-white/20 px-2 py-1 rounded text-white">Remote</span>
+          </div>
+          <p class="mt-3 text-white/90">Duration: July 10 – August 10</p>
+          <p class="mt-2 text-white/90"><strong>Skills:</strong> Node.js, Databases</p>
+          <ul class="mt-3 text-sm text-white/90 list-disc list-inside space-y-1">
+            <li>Real-time APIs</li>
+            <li>Mentor code reviews</li>
+          </ul>
+          <div class="mt-4 flex items-center justify-between">
+            <a href="https://forms.gle/your-google-form-link" target="_blank" class="px-4 py-2 bg-[#7C3AED] text-white rounded-lg shadow">Apply Now</a>
+            <a href="#" class="text-sm text-white/80 underline">View details</a>
+          </div>
+        </article>
 
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>JavaScript</span>
-            <span>GitHub</span>
+      </div>
+    </section>
 
+    <!-- BENEFITS GRID -->
+    <section class="container mx-auto px-6 py-8">
+      <h2 class="text-2xl font-bold text-center text-purple-900">Benefits of Our Internships</h2>
+      <div class="mt-6 grid md:grid-cols-4 gap-6">
+        <div class="glass p-4 text-center">
+          <h4 class="font-semibold text-purple-900">Certificate</h4>
+          <p class="mt-2 text-white/90 text-sm">Official internship certificate on completion.</p>
         </div>
+        <div class="glass p-4 text-center">
+          <h4 class="font-semibold text-purple-900">Real Projects</h4>
+          <p class="mt-2 text-white/90 text-sm">Work on live projects to build your portfolio.</p>
+        </div>
+        <div class="glass p-4 text-center">
+          <h4 class="font-semibold text-purple-900">Mentorship</h4>
+          <p class="mt-2 text-white/90 text-sm">1:1 mentor support and code reviews.</p>
+        </div>
+        <div class="glass p-4 text-center">
+          <h4 class="font-semibold text-purple-900">Portfolio</h4>
+          <p class="mt-2 text-white/90 text-sm">Showcase projects to future employers.</p>
+        </div>
+      </div>
+    </section>
 
-        <a href="YOUR_GOOGLE_FORM_LINK"
-        target="_blank"
-        class="apply-btn">
+  </main>
 
-            Apply Now
-
-        </a>
-
+  <!-- FOOTER -->
+  <footer class="bg-[#7C3AED] text-white mt-12">
+    <div class="container mx-auto px-6 py-8 grid md:grid-cols-3 gap-6">
+      <div>
+        <h4 class="font-bold">Quick Links</h4>
+        <ul class="mt-3 space-y-2 text-sm">
+          <li><a href="index.html" class="hover:underline">Home</a></li>
+          <li><a href="about.html" class="hover:underline">About</a></li>
+          <li><a href="team.html" class="hover:underline">Team</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold">Contact</h4>
+        <p class="mt-3 text-sm">contact.spirexfoundation@gmail.com</p>
+      </div>
+      <div>
+        <h4 class="font-bold">Legal</h4>
+        <p class="mt-3 text-sm">© 2026 SpireX Foundation. All rights reserved.</p>
+      </div>
     </div>
+  </footer>
 
-</section>
-
-<!-- WHAT YOU WILL LEARN -->
-
-<section class="learn-section">
-
-    <h2>What You Will Learn</h2>
-
-    <div class="learn-grid">
-
-        <div class="learn-card">
-            <i class="fab fa-html5"></i>
-            <h3>HTML5</h3>
-            <p>Build modern website structures.</p>
-        </div>
-
-        <div class="learn-card">
-            <i class="fab fa-css3-alt"></i>
-            <h3>CSS3</h3>
-            <p>Create responsive and attractive layouts.</p>
-        </div>
-
-        <div class="learn-card">
-            <i class="fab fa-js"></i>
-            <h3>JavaScript</h3>
-            <p>Add interactivity and dynamic features.</p>
-        </div>
-
-        <div class="learn-card">
-            <i class="fab fa-github"></i>
-            <h3>GitHub</h3>
-            <p>Publish and manage your projects.</p>
-        </div>
-
-    </div>
-
-</section>
-
-<!-- BENEFITS -->
-
-<section class="benefits-section">
-
-    <h2>Internship Benefits</h2>
-
-    <div class="benefits-grid">
-
-        <div class="benefit-card">
-            🎓 Internship Completion Certificate
-        </div>
-
-        <div class="benefit-card">
-            💻 Real-Time Projects
-        </div>
-
-        <div class="benefit-card">
-            🚀 Portfolio Development
-        </div>
-
-        <div class="benefit-card">
-            👨‍🏫 Mentor Support
-        </div>
-
-        <div class="benefit-card">
-            🌐 GitHub Project Hosting
-        </div>
-
-        <div class="benefit-card">
-            📈 Skill Development
-        </div>
-
-    </div>
-
-</section>
-
-<!-- PROJECTS -->
-
-<section class="project-section">
-
-    <h2>Projects Included</h2>
-
-    <div class="project-grid">
-
-        <div class="project-card">
-            Personal Portfolio Website
-        </div>
-
-        <div class="project-card">
-            Landing Page Design
-        </div>
-
-        <div class="project-card">
-            Responsive Website
-        </div>
-
-        <div class="project-card">
-            JavaScript Calculator
-        </div>
-
-        <div class="project-card">
-            To-Do List Application
-        </div>
-
-        <div class="project-card">
-            Final Capstone Project
-        </div>
-
-    </div>
-
-</section>
-
-<!-- CTA -->
-
-<section class="cta-section">
-
-    <h2>Start Your Learning Journey Today</h2>
-
-    <p>
-        Build projects, gain experience and improve
-        your technical skills.
-    </p>
-
-    <a href="YOUR_GOOGLE_FORM_LINK"
-    target="_blank"
-    class="btn">
-
-        Apply Now
-
-    </a>
-
-</section>
-
-<!-- FOOTER -->
-
-<footer>
-
-<div class="footer-container">
-
-<div>
-<h3>SpireX Foundation</h3>
-<p>Learn • Build • Rise</p>
-</div>
-
-<div>
-<h3>Quick Links</h3>
-
-<a href="index.html">Home</a><br>
-<a href="about.html">About</a><br>
-<a href="internships.html">Internships</a><br>
-<a href="team.html">Team</a><br>
-<a href="contact.html">Contact</a>
-
-</div>
-
-<div>
-<h3>Contact</h3>
-<p>contact.spirexfoundation@gmail.com</p>
-</div>
-
-</div>
-
-<p class="copyright">
-© 2026 SpireX Foundation. All Rights Reserved.
-</p>
-
-</footer>
-
-<script>
-
-const hamburger =
-document.getElementById("hamburger");
-
-const navLinks =
-document.getElementById("navLinks");
-
-hamburger.addEventListener("click", () => {
-navLinks.classList.toggle("active");
-});
-
-</script>
-
+  <script src="script.js"></script>
 </body>
 </html>
