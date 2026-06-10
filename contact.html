@@ -10,25 +10,27 @@
 <body class="min-h-screen bg-gradient-to-br from-[#7C3AED] to-[#06B6D4] text-white antialiased">
 
   <!-- NAVBAR -->
-  <header class="fixed w-full z-50 bg-white/20 backdrop-blur-md shadow">
-    <div class="container mx-auto flex items-center justify-between p-4">
-      <a href="index.html" class="flex items-center gap-3">
-        <img src="assets/logo.png" alt="SpireX Foundation" class="h-10 w-auto" />
-        <span class="font-semibold text-purple-900">SpireX Foundation</span>
-      </a>
+  <header class="fixed w-full z-50">
+    <div class="bg-white/20 backdrop-blur-md shadow">
+      <div class="container mx-auto flex items-center justify-between p-4">
+        <a href="index.html" class="flex items-center gap-3">
+          <img src="assets/logo.png" alt="SpireX Foundation" class="h-10 w-auto" />
+          <span class="font-semibold text-white">SpireX Foundation</span>
+        </a>
 
-      <nav class="hidden md:flex items-center gap-6 text-purple-900 font-medium">
-        <a href="index.html" class="hover:underline">Home</a>
-        <a href="about.html" class="hover:underline">About</a>
-        <a href="internships.html" class="hover:underline">Internships</a>
-        <a href="team.html" class="hover:underline">Team</a>
-        <a href="contact.html" class="underline decoration-cyan-300">Contact</a>
-      </nav>
+        <nav class="hidden md:flex items-center gap-6 text-white font-medium">
+          <a href="index.html" class="hover:underline">Home</a>
+          <a href="about.html" class="hover:underline">About</a>
+          <a href="internships.html" class="hover:underline">Internships</a>
+          <a href="team.html" class="hover:underline">Team</a>
+          <a href="contact.html" class="underline">Contact</a>
+        </nav>
 
-      <button id="menu-btn" class="md:hidden text-purple-900 text-2xl">☰</button>
+        <button class="menu-btn md:hidden text-white text-2xl">☰</button>
+      </div>
     </div>
 
-    <div id="mobile-menu" class="hidden bg-white/90 backdrop-blur p-4">
+    <div class="mobile-menu hidden bg-white/90 backdrop-blur p-4">
       <a href="index.html" class="block py-2 text-purple-900">Home</a>
       <a href="about.html" class="block py-2 text-purple-900">About</a>
       <a href="internships.html" class="block py-2 text-purple-900">Internships</a>
@@ -42,22 +44,22 @@
     <section class="container mx-auto px-6 py-10">
       <div class="grid md:grid-cols-2 gap-6">
         <div class="glass p-6">
-          <h1 class="text-2xl font-bold text-purple-900">Contact Us</h1>
+          <h1 class="text-2xl font-bold text-white">Contact Us</h1>
           <p class="mt-3 text-white/90">For queries, partnerships, or internship support reach out to us.</p>
 
           <div class="mt-6">
-            <h4 class="font-semibold text-purple-900">Email</h4>
+            <h4 class="font-semibold text-white">Email</h4>
             <p class="mt-2 text-white/90">contact.spirexfoundation@gmail.com</p>
           </div>
 
           <div class="mt-6">
-            <h4 class="font-semibold text-purple-900">Address</h4>
+            <h4 class="font-semibold text-white">Address</h4>
             <p class="mt-2 text-white/90">Remote / Online — Programs run globally</p>
           </div>
         </div>
 
         <div class="glass p-6">
-          <h2 class="text-xl font-semibold text-purple-900">Send a Message</h2>
+          <h2 class="text-xl font-semibold text-white">Send a Message</h2>
           <form id="contact-form" class="mt-4 space-y-4">
             <input type="text" id="name" placeholder="Your name" class="w-full p-3 rounded text-black" required />
             <input type="email" id="email" placeholder="Your email" class="w-full p-3 rounded text-black" required />
@@ -72,11 +74,11 @@
 
     <!-- FAQ -->
     <section class="container mx-auto px-6 py-8">
-      <h2 class="text-2xl font-bold text-center text-purple-900">FAQ</h2>
+      <h2 class="text-2xl font-bold text-center text-white">FAQ</h2>
       <div class="mt-6 max-w-3xl mx-auto space-y-4">
         <div class="glass p-4">
           <button class="faq-toggle w-full text-left flex justify-between items-center">
-            <span class="font-semibold text-purple-900">How do I apply for an internship?</span>
+            <span class="font-semibold text-white">How do I apply for an internship?</span>
             <span class="text-white/80">+</span>
           </button>
           <div class="faq-content mt-3 hidden text-white/90">Click the Apply Now button on the internship card and complete the Google Form.</div>
@@ -84,7 +86,7 @@
 
         <div class="glass p-4">
           <button class="faq-toggle w-full text-left flex justify-between items-center">
-            <span class="font-semibold text-purple-900">Are internships paid?</span>
+            <span class="font-semibold text-white">Are internships paid?</span>
             <span class="text-white/80">+</span>
           </button>
           <div class="faq-content mt-3 hidden text-white/90">Some internships may offer stipends; details are listed in each internship description.</div>
@@ -92,7 +94,7 @@
 
         <div class="glass p-4">
           <button class="faq-toggle w-full text-left flex justify-between items-center">
-            <span class="font-semibold text-purple-900">Do I get a certificate?</span>
+            <span class="font-semibold text-white">Do I get a certificate?</span>
             <span class="text-white/80">+</span>
           </button>
           <div class="faq-content mt-3 hidden text-white/90">Yes — all successful interns receive a certificate and project feedback.</div>
