@@ -1,278 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Our Team | SpireX Foundation</title>
-
-<link rel="stylesheet" href="style.css">
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SpireX Foundation — Team</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css" />
 </head>
+<body class="min-h-screen bg-gradient-to-br from-[#7C3AED] to-[#06B6D4] text-white antialiased">
 
-<body>
+  <!-- NAVBAR -->
+  <header class="fixed w-full z-50 bg-white/20 backdrop-blur-md shadow">
+    <div class="container mx-auto flex items-center justify-between p-4">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="assets/logo.png" alt="SpireX Foundation" class="h-10 w-auto" />
+        <span class="font-semibold text-purple-900">SpireX Foundation</span>
+      </a>
 
-<!-- NAVBAR -->
+      <nav class="hidden md:flex items-center gap-6 text-purple-900 font-medium">
+        <a href="index.html" class="hover:underline">Home</a>
+        <a href="about.html" class="hover:underline">About</a>
+        <a href="internships.html" class="hover:underline">Internships</a>
+        <a href="team.html" class="underline decoration-cyan-300">Team</a>
+        <a href="contact.html" class="hover:underline">Contact</a>
+      </nav>
 
-<nav class="navbar">
-
-    <div class="logo">
-        <img src="assets/logo.png" alt="SpireX Foundation">
+      <button id="menu-btn" class="md:hidden text-purple-900 text-2xl">☰</button>
     </div>
 
-    <ul class="nav-links" id="navLinks">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="internships.html">Internships</a></li>
-        <li><a href="team.html" class="active">Team</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
-
-    <div class="hamburger" id="hamburger">
-        <i class="fas fa-bars"></i>
+    <div id="mobile-menu" class="hidden bg-white/90 backdrop-blur p-4">
+      <a href="index.html" class="block py-2 text-purple-900">Home</a>
+      <a href="about.html" class="block py-2 text-purple-900">About</a>
+      <a href="internships.html" class="block py-2 text-purple-900">Internships</a>
+      <a href="team.html" class="block py-2 text-purple-900">Team</a>
+      <a href="contact.html" class="block py-2 text-purple-900">Contact</a>
     </div>
+  </header>
 
-</nav>
+  <main class="pt-28">
 
-<!-- HERO SECTION -->
+    <section class="container mx-auto px-6 py-10">
+      <h1 class="text-3xl md:text-4xl font-bold text-center text-purple-900">Meet the Team</h1>
+      <p class="mt-3 text-center text-white/90 max-w-2xl mx-auto">A small, focused team committed to mentoring and building learning experiences.</p>
 
-<section class="team-hero">
-
-    <h1>Meet Our Team</h1>
-
-    <p>
-        Dedicated individuals working together to
-        empower students through learning, innovation
-        and practical experience.
-    </p>
-
-</section>
-
-<!-- TEAM INTRO -->
-
-<section class="team-intro">
-
-    <h2>Our Leadership Team</h2>
-
-    <p>
-        SpireX Foundation is guided by passionate
-        professionals committed to helping students
-        build skills, confidence and career readiness.
-    </p>
-
-</section>
-
-<!-- TEAM MEMBERS -->
-
-<section class="team-section">
-
-    <div class="team-grid">
-
+      <div class="mt-8 grid md:grid-cols-3 gap-6">
         <!-- Founder -->
-
-        <div class="team-card">
-
-            <img src="assets/founder.jpg"
-            alt="Founder">
-
-            <h3>Chandru K</h3>
-
-            <span>Founder & CEO</span>
-
-            <p>
-                Leads the vision, strategy and growth
-                of SpireX Foundation while creating
-                opportunities for student development.
-            </p>
-
-            <div class="social-icons">
-
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fas fa-envelope"></i></a>
-
-            </div>
-
+        <div class="glass p-6 text-center">
+          <div class="h-28 w-28 mx-auto rounded-full bg-white/10 flex items-center justify-center text-2xl font-bold text-white">CK</div>
+          <h3 class="mt-4 font-semibold text-purple-900">Chandru K</h3>
+          <p class="text-white/90">Founder & CEO</p>
+          <p class="mt-3 text-sm text-white/80">Visionary and mentor focused on practical learning.</p>
         </div>
 
         <!-- Program Manager -->
-
-        <div class="team-card">
-
-            <img src="assets/program-manager.jpg"
-            alt="Program Manager">
-
-            <h3>Program Manager</h3>
-
-            <span>Program Operations</span>
-
-            <p>
-                Coordinates internship programs,
-                student engagement activities and
-                program execution.
-            </p>
-
-            <div class="social-icons">
-
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fas fa-envelope"></i></a>
-
-            </div>
-
+        <div class="glass p-6 text-center">
+          <div class="h-28 w-28 mx-auto rounded-full bg-white/10 flex items-center justify-center text-2xl font-bold text-white">PM</div>
+          <h3 class="mt-4 font-semibold text-purple-900">Program Manager</h3>
+          <p class="text-white/90">Program Manager</p>
+          <p class="mt-3 text-sm text-white/80">Designs curriculum and coordinates mentorship.</p>
         </div>
 
-        <!-- Technical Mentor -->
-
-        <div class="team-card">
-
-            <img src="assets/technical-mentor.jpg"
-            alt="Technical Mentor">
-
-            <h3>Technical Mentor</h3>
-
-            <span>Technology & Development</span>
-
-            <p>
-                Guides students in web development,
-                project building and practical
-                technical learning.
-            </p>
-
-            <div class="social-icons">
-
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fas fa-envelope"></i></a>
-
-            </div>
-
+        <!-- Technical Lead -->
+        <div class="glass p-6 text-center">
+          <div class="h-28 w-28 mx-auto rounded-full bg-white/10 flex items-center justify-center text-2xl font-bold text-white">TL</div>
+          <h3 class="mt-4 font-semibold text-purple-900">Technical Lead</h3>
+          <p class="text-white/90">Technical Lead</p>
+          <p class="mt-3 text-sm text-white/80">Ensures code quality and technical mentorship.</p>
         </div>
+      </div>
+    </section>
 
+    <!-- CORE VALUES -->
+    <section class="container mx-auto px-6 py-8">
+      <h2 class="text-2xl font-bold text-center text-purple-900">Core Values</h2>
+      <div class="mt-6 grid md:grid-cols-4 gap-6">
+        <div class="glass p-4 text-center">
+          <h4 class="font-semibold text-purple-900">Innovation</h4>
+          <p class="mt-2 text-white/90 text-sm">We encourage creative problem solving.</p>
+        </div>
+        <div class="glass p-4 text-center">
+          <h4 class="font-semibold text-purple-900">Collaboration</h4>
+          <p class="mt-2 text-white/90 text-sm">We learn and build together.</p>
+        </div>
+        <div class="glass p-4 text-center">
+          <h4 class="font-semibold text-purple-900">Growth</h4>
+          <p class="mt-2 text-white/90 text-sm">Continuous improvement for learners and mentors.</p>
+        </div>
+        <div class="glass p-4 text-center">
+          <h4 class="font-semibold text-purple-900">Integrity</h4>
+          <p class="mt-2 text-white/90 text-sm">We act with honesty and responsibility.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#7C3AED] text-white mt-12">
+    <div class="container mx-auto px-6 py-8 grid md:grid-cols-3 gap-6">
+      <div>
+        <h4 class="font-bold">Quick Links</h4>
+        <ul class="mt-3 space-y-2 text-sm">
+          <li><a href="index.html" class="hover:underline">Home</a></li>
+          <li><a href="about.html" class="hover:underline">About</a></li>
+          <li><a href="internships.html" class="hover:underline">Internships</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold">Contact</h4>
+        <p class="mt-3 text-sm">contact.spirexfoundation@gmail.com</p>
+      </div>
+      <div>
+        <h4 class="font-bold">Legal</h4>
+        <p class="mt-3 text-sm">© 2026 SpireX Foundation. All rights reserved.</p>
+      </div>
     </div>
+  </footer>
 
-</section>
-
-<!-- VALUES -->
-
-<section class="values-section">
-
-    <h2>Our Core Values</h2>
-
-    <div class="values-grid">
-
-        <div class="value-card">
-            🚀 Innovation
-        </div>
-
-        <div class="value-card">
-            🎓 Learning
-        </div>
-
-        <div class="value-card">
-            🤝 Collaboration
-        </div>
-
-        <div class="value-card">
-            💡 Creativity
-        </div>
-
-    </div>
-
-</section>
-
-<!-- WHY OUR TEAM -->
-
-<section class="why-team">
-
-    <h2>Why Our Team?</h2>
-
-    <div class="why-grid">
-
-        <div class="why-card">
-            Student-Centered Approach
-        </div>
-
-        <div class="why-card">
-            Project-Based Learning
-        </div>
-
-        <div class="why-card">
-            Practical Skill Development
-        </div>
-
-        <div class="why-card">
-            Supportive Mentorship
-        </div>
-
-    </div>
-
-</section>
-
-<!-- CTA -->
-
-<section class="cta-section">
-
-    <h2>Join Our Growing Community</h2>
-
-    <p>
-        Learn new skills, build projects and become
-        part of the SpireX Foundation journey.
-    </p>
-
-    <a href="internships.html" class="btn">
-        Explore Internships
-    </a>
-
-</section>
-
-<!-- FOOTER -->
-
-<footer>
-
-<div class="footer-container">
-
-<div>
-<h3>SpireX Foundation</h3>
-<p>Learn • Build • Rise</p>
-</div>
-
-<div>
-<h3>Quick Links</h3>
-
-<a href="index.html">Home</a><br>
-<a href="about.html">About</a><br>
-<a href="internships.html">Internships</a><br>
-<a href="team.html">Team</a><br>
-<a href="contact.html">Contact</a>
-
-</div>
-
-<div>
-<h3>Contact</h3>
-<p>contact.spirexfoundation@gmail.com</p>
-</div>
-
-</div>
-
-<p class="copyright">
-© 2026 SpireX Foundation. All Rights Reserved.
-</p>
-
-</footer>
-
-<script>
-
-const hamburger =
-document.getElementById("hamburger");
-
-const navLinks =
-document.getElementById("navLinks");
-
-hamburger.addEventListener("click", () => {
-navLinks.classList.toggle("active");
-});
-
-</script>
-
+  <script src="script.js"></script>
 </body>
 </html>
