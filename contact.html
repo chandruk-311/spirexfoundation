@@ -1,222 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact Us | SpireX Foundation</title>
-
-<link rel="stylesheet" href="style.css">
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SpireX Foundation — Contact</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css" />
 </head>
+<body class="min-h-screen bg-gradient-to-br from-[#7C3AED] to-[#06B6D4] text-white antialiased">
 
-<body>
+  <!-- NAVBAR -->
+  <header class="fixed w-full z-50 bg-white/20 backdrop-blur-md shadow">
+    <div class="container mx-auto flex items-center justify-between p-4">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="assets/logo.png" alt="SpireX Foundation" class="h-10 w-auto" />
+        <span class="font-semibold text-purple-900">SpireX Foundation</span>
+      </a>
 
-<!-- NAVBAR -->
+      <nav class="hidden md:flex items-center gap-6 text-purple-900 font-medium">
+        <a href="index.html" class="hover:underline">Home</a>
+        <a href="about.html" class="hover:underline">About</a>
+        <a href="internships.html" class="hover:underline">Internships</a>
+        <a href="team.html" class="hover:underline">Team</a>
+        <a href="contact.html" class="underline decoration-cyan-300">Contact</a>
+      </nav>
 
-<nav class="navbar">
-
-    <div class="logo">
-        <img src="assets/logo.png" alt="SpireX Foundation">
+      <button id="menu-btn" class="md:hidden text-purple-900 text-2xl">☰</button>
     </div>
 
-    <ul class="nav-links" id="navLinks">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="internships.html">Internships</a></li>
-        <li><a href="team.html">Team</a></li>
-        <li><a href="contact.html" class="active">Contact</a></li>
-    </ul>
-
-    <div class="hamburger" id="hamburger">
-        <i class="fas fa-bars"></i>
+    <div id="mobile-menu" class="hidden bg-white/90 backdrop-blur p-4">
+      <a href="index.html" class="block py-2 text-purple-900">Home</a>
+      <a href="about.html" class="block py-2 text-purple-900">About</a>
+      <a href="internships.html" class="block py-2 text-purple-900">Internships</a>
+      <a href="team.html" class="block py-2 text-purple-900">Team</a>
+      <a href="contact.html" class="block py-2 text-purple-900">Contact</a>
     </div>
+  </header>
 
-</nav>
+  <main class="pt-28">
 
-<!-- HERO SECTION -->
+    <section class="container mx-auto px-6 py-10">
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="glass p-6">
+          <h1 class="text-2xl font-bold text-purple-900">Contact Us</h1>
+          <p class="mt-3 text-white/90">For queries, partnerships, or internship support reach out to us.</p>
 
-<section class="contact-hero">
+          <div class="mt-6">
+            <h4 class="font-semibold text-purple-900">Email</h4>
+            <p class="mt-2 text-white/90">contact.spirexfoundation@gmail.com</p>
+          </div>
 
-    <h1>Contact Us</h1>
-
-    <p>
-        We'd love to hear from you. Get in touch with
-        SpireX Foundation for internships, partnerships
-        and student opportunities.
-    </p>
-
-</section>
-
-<!-- CONTACT INFO -->
-
-<section class="contact-info">
-
-    <h2>Get In Touch</h2>
-
-    <div class="contact-grid">
-
-        <div class="contact-card">
-            <i class="fas fa-envelope"></i>
-            <h3>Email</h3>
-            <p>contact.spirexfoundation@gmail.com</p>
+          <div class="mt-6">
+            <h4 class="font-semibold text-purple-900">Address</h4>
+            <p class="mt-2 text-white/90">Remote / Online — Programs run globally</p>
+          </div>
         </div>
 
-        <div class="contact-card">
-            <i class="fab fa-linkedin"></i>
-            <h3>LinkedIn</h3>
-            <p>SpireX Foundation</p>
+        <div class="glass p-6">
+          <h2 class="text-xl font-semibold text-purple-900">Send a Message</h2>
+          <form id="contact-form" class="mt-4 space-y-4">
+            <input type="text" id="name" placeholder="Your name" class="w-full p-3 rounded text-black" required />
+            <input type="email" id="email" placeholder="Your email" class="w-full p-3 rounded text-black" required />
+            <input type="text" id="subject" placeholder="Subject" class="w-full p-3 rounded text-black" />
+            <textarea id="message" rows="5" placeholder="Message" class="w-full p-3 rounded text-black" required></textarea>
+            <button type="submit" class="px-5 py-3 bg-[#7C3AED] rounded text-white font-semibold">Send Message</button>
+            <p id="form-status" class="text-sm mt-2 text-white/80 hidden"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="container mx-auto px-6 py-8">
+      <h2 class="text-2xl font-bold text-center text-purple-900">FAQ</h2>
+      <div class="mt-6 max-w-3xl mx-auto space-y-4">
+        <div class="glass p-4">
+          <button class="faq-toggle w-full text-left flex justify-between items-center">
+            <span class="font-semibold text-purple-900">How do I apply for an internship?</span>
+            <span class="text-white/80">+</span>
+          </button>
+          <div class="faq-content mt-3 hidden text-white/90">Click the Apply Now button on the internship card and complete the Google Form.</div>
         </div>
 
-        <div class="contact-card">
-            <i class="fas fa-globe"></i>
-            <h3>Website</h3>
-            <p>spirexfoundation.in</p>
+        <div class="glass p-4">
+          <button class="faq-toggle w-full text-left flex justify-between items-center">
+            <span class="font-semibold text-purple-900">Are internships paid?</span>
+            <span class="text-white/80">+</span>
+          </button>
+          <div class="faq-content mt-3 hidden text-white/90">Some internships may offer stipends; details are listed in each internship description.</div>
         </div>
 
+        <div class="glass p-4">
+          <button class="faq-toggle w-full text-left flex justify-between items-center">
+            <span class="font-semibold text-purple-900">Do I get a certificate?</span>
+            <span class="text-white/80">+</span>
+          </button>
+          <div class="faq-content mt-3 hidden text-white/90">Yes — all successful interns receive a certificate and project feedback.</div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#7C3AED] text-white mt-12">
+    <div class="container mx-auto px-6 py-8 grid md:grid-cols-3 gap-6">
+      <div>
+        <h4 class="font-bold">Quick Links</h4>
+        <ul class="mt-3 space-y-2 text-sm">
+          <li><a href="index.html" class="hover:underline">Home</a></li>
+          <li><a href="about.html" class="hover:underline">About</a></li>
+          <li><a href="internships.html" class="hover:underline">Internships</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold">Contact</h4>
+        <p class="mt-3 text-sm">contact.spirexfoundation@gmail.com</p>
+      </div>
+      <div>
+        <h4 class="font-bold">Legal</h4>
+        <p class="mt-3 text-sm">© 2026 SpireX Foundation. All rights reserved.</p>
+      </div>
     </div>
+  </footer>
 
-</section>
-
-<!-- CONTACT FORM -->
-
-<section class="contact-form-section">
-
-    <h2>Send Us A Message</h2>
-
-    <form class="contact-form">
-
-        <input type="text"
-        placeholder="Full Name"
-        required>
-
-        <input type="email"
-        placeholder="Email Address"
-        required>
-
-        <input type="text"
-        placeholder="Subject"
-        required>
-
-        <textarea
-        rows="6"
-        placeholder="Your Message"
-        required></textarea>
-
-        <button type="submit" class="btn">
-            Send Message
-        </button>
-
-    </form>
-
-</section>
-
-<!-- FAQ SECTION -->
-
-<section class="faq-section">
-
-    <h2>Frequently Asked Questions</h2>
-
-    <div class="faq-container">
-
-        <div class="faq-card">
-            <h3>Is the internship remote?</h3>
-            <p>
-                Yes, all internship activities are
-                conducted remotely.
-            </p>
-        </div>
-
-        <div class="faq-card">
-            <h3>Will I receive a certificate?</h3>
-            <p>
-                Yes, students who successfully complete
-                the internship will receive a certificate.
-            </p>
-        </div>
-
-        <div class="faq-card">
-            <h3>Do I need prior experience?</h3>
-            <p>
-                No. Beginners are welcome to apply and learn.
-            </p>
-        </div>
-
-    </div>
-
-</section>
-
-<!-- CTA -->
-
-<section class="cta-section">
-
-    <h2>Ready To Start Learning?</h2>
-
-    <p>
-        Join our internship programs and gain practical
-        experience through real-world projects.
-    </p>
-
-    <a href="internships.html" class="btn">
-        Explore Internships
-    </a>
-
-</section>
-
-<!-- FOOTER -->
-
-<footer>
-
-<div class="footer-container">
-
-<div>
-<h3>SpireX Foundation</h3>
-<p>Learn • Build • Rise</p>
-</div>
-
-<div>
-<h3>Quick Links</h3>
-
-<a href="index.html">Home</a><br>
-<a href="about.html">About</a><br>
-<a href="internships.html">Internships</a><br>
-<a href="team.html">Team</a><br>
-<a href="contact.html">Contact</a>
-
-</div>
-
-<div>
-<h3>Contact</h3>
-
-<p>contact.spirexfoundation@gmail.com</p>
-
-<p>Follow us on LinkedIn</p>
-
-</div>
-
-</div>
-
-<p class="copyright">
-© 2026 SpireX Foundation. All Rights Reserved.
-</p>
-
-</footer>
-
-<script>
-
-const hamburger =
-document.getElementById("hamburger");
-
-const navLinks =
-document.getElementById("navLinks");
-
-hamburger.addEventListener("click", () => {
-navLinks.classList.toggle("active");
-});
-
-</script>
-
+  <script src="script.js"></script>
 </body>
 </html>
