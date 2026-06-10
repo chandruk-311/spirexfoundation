@@ -1,33 +1,44 @@
-// Mobile menu toggle (works on all pages)
-document.querySelectorAll('#menu-btn').forEach(btn => {
+/* Global interactive behaviors for all pages */
+
+/* Mobile menu toggle (supports multiple menu buttons across pages) */
+document.querySelectorAll('.menu-btn').forEach(btn => {
   btn.addEventListener('click', () => {
-    const mobile = document.getElementById('mobile-menu');
-    if (mobile) mobile.classList.toggle('hidden');
+    const mobile = document.querySelector('.mobile-menu');
+    if (!mobile) return;
+    mobile.classList.toggle('hidden');
   });
 });
 
-// Animated counters
-function runCounters() {
+/* Scroll-triggered counters */
+function initCounters() {
   const counters = document.querySelectorAll('.counter');
-  counters.forEach(counter => {
-    const target = +counter.getAttribute('data-target') || 0;
-    let count = 0;
-    const step = Math.max(1, Math.floor(target / 200));
-    const update = () => {
-      count += step;
-      if (count < target) {
-        counter.innerText = count;
-        requestAnimationFrame(update);
-      } else {
-        counter.innerText = target;
-      }
-    };
-    update();
-  });
+  if (!counters.length) return;
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const el = entry.target;
+      const target = +el.dataset.target || 0;
+      let current = 0;
+      const duration = 1200;
+      const stepTime = Math.max(8, Math.floor(duration / Math.max(1, target)));
+      const step = Math.max(1, Math.floor(target / (duration / stepTime)));
+      const timer = setInterval(() => {
+        current += step;
+        if (current >= target) {
+          el.innerText = target;
+          clearInterval(timer);
+        } else {
+          el.innerText = current;
+        }
+      }, stepTime);
+      observer.unobserve(el);
+    });
+  }, { threshold: 0.4 });
+  counters.forEach(c => observer.observe(c));
 }
-document.addEventListener('DOMContentLoaded', runCounters);
+document.addEventListener('DOMContentLoaded', initCounters);
 
-// Simple testimonial rotation (About page)
+/* Testimonials rotation (used on home/about) */
 const testimonials = [
   { text: "The internship helped me build a portfolio and land my first role.", author: "A. Student" },
   { text: "Mentors were supportive and the projects were real-world.", author: "B. Learner" },
@@ -35,12 +46,12 @@ const testimonials = [
 ];
 let tIndex = 0;
 function rotateTestimonials() {
-  const tText = document.getElementById('testimonial-text');
-  const tAuthor = document.getElementById('testimonial-author');
+  const tText = document.getElementById('testimonial-text') || document.getElementById('home-testimonial');
+  const tAuthor = document.getElementById('testimonial-author') || document.getElementById('home-testimonial-author');
   if (!tText || !tAuthor) return;
   tIndex = (tIndex + 1) % testimonials.length;
-  tText.classList.add('opacity-0', 'transition', 'duration-300');
-  tAuthor.classList.add('opacity-0', 'transition', 'duration-300');
+  tText.classList.add('opacity-0');
+  tAuthor.classList.add('opacity-0');
   setTimeout(() => {
     tText.innerText = testimonials[tIndex].text;
     tAuthor.innerText = `— ${testimonials[tIndex].author}`;
@@ -50,7 +61,7 @@ function rotateTestimonials() {
 }
 setInterval(rotateTestimonials, 5000);
 
-// FAQ accordion
+/* FAQ accordion */
 document.querySelectorAll('.faq-toggle').forEach(btn => {
   btn.addEventListener('click', () => {
     const content = btn.nextElementSibling;
@@ -69,7 +80,7 @@ document.querySelectorAll('.faq-toggle').forEach(btn => {
   });
 });
 
-// Contact form basic handler (no backend)
+/* Contact form handler (client-side simulation) */
 const contactForm = document.getElementById('contact-form');
 if (contactForm) {
   contactForm.addEventListener('submit', (e) => {
@@ -78,10 +89,59 @@ if (contactForm) {
     if (!status) return;
     status.classList.remove('hidden');
     status.innerText = 'Sending message...';
-    // Simulate send
     setTimeout(() => {
-      status.innerText = 'Message sent. We will reply to your email shortly.';
+      status.innerText = 'Message sent successfully. We will reply shortly.';
       contactForm.reset();
     }, 900);
   });
 }
+
+/* Internship search & filter (client-side) */
+const searchBtn = document.getElementById('search-btn');
+const searchInput = document.getElementById('search-input');
+const internSearch = document.getElementById('intern-search');
+const internDuration = document.getElementById('intern-duration');
+
+function filterInternships(query, duration) {
+  const cards = document.querySelectorAll('.internship-card');
+  if (!cards.length) return;
+  const q = (query || '').trim().toLowerCase();
+  cards.forEach(card => {
+    const skills = (card.dataset.skills || '').toLowerCase();
+    const dur = (card.dataset.duration || '').toLowerCase();
+    const title = (card.querySelector('h3')?.innerText || '').toLowerCase();
+    const matchesQuery = !q || title.includes(q) || skills.includes(q);
+    const matchesDuration = !duration || dur.includes(duration.toLowerCase());
+    if (matchesQuery && matchesDuration) {
+      card.style.display = '';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+}
+
+if (searchBtn && searchInput) {
+  searchBtn.addEventListener('click', () => {
+    filterInternships(searchInput.value, document.getElementById('filter-duration')?.value || '');
+  });
+}
+if (internSearch) {
+  internSearch.addEventListener('input', () => {
+    filterInternships(internSearch.value, internDuration?.value || '');
+  });
+}
+if (internDuration) {
+  internDuration.addEventListener('change', () => {
+    filterInternships(internSearch?.value || '', internDuration.value);
+  });
+}
+
+/* Small accessibility: close mobile menu on outside click */
+document.addEventListener('click', (e) => {
+  const mobile = document.querySelector('.mobile-menu');
+  const btn = e.target.closest('.menu-btn');
+  if (!btn && mobile && !mobile.classList.contains('hidden')) {
+    const isInside = e.target.closest('.mobile-menu');
+    if (!isInside) mobile.classList.add('hidden');
+  }
+});
