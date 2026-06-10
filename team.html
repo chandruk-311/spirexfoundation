@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,25 +11,27 @@
 <body class="min-h-screen bg-gradient-to-br from-[#7C3AED] to-[#06B6D4] text-white antialiased">
 
   <!-- NAVBAR -->
-  <header class="fixed w-full z-50 bg-white/20 backdrop-blur-md shadow">
-    <div class="container mx-auto flex items-center justify-between p-4">
-      <a href="index.html" class="flex items-center gap-3">
-        <img src="assets/logo.png" alt="SpireX Foundation" class="h-10 w-auto" />
-        <span class="font-semibold text-purple-900">SpireX Foundation</span>
-      </a>
+  <header class="fixed w-full z-50">
+    <div class="bg-white/20 backdrop-blur-md shadow">
+      <div class="container mx-auto flex items-center justify-between p-4">
+        <a href="index.html" class="flex items-center gap-3">
+          <img src="assets/logo.png" alt="SpireX Foundation" class="h-10 w-auto" />
+          <span class="font-semibold text-white">SpireX Foundation</span>
+        </a>
 
-      <nav class="hidden md:flex items-center gap-6 text-purple-900 font-medium">
-        <a href="index.html" class="hover:underline">Home</a>
-        <a href="about.html" class="hover:underline">About</a>
-        <a href="internships.html" class="hover:underline">Internships</a>
-        <a href="team.html" class="underline decoration-cyan-300">Team</a>
-        <a href="contact.html" class="hover:underline">Contact</a>
-      </nav>
+        <nav class="hidden md:flex items-center gap-6 text-white font-medium">
+          <a href="index.html" class="hover:underline">Home</a>
+          <a href="about.html" class="hover:underline">About</a>
+          <a href="internships.html" class="hover:underline">Internships</a>
+          <a href="team.html" class="underline">Team</a>
+          <a href="contact.html" class="hover:underline">Contact</a>
+        </nav>
 
-      <button id="menu-btn" class="md:hidden text-purple-900 text-2xl">☰</button>
+        <button class="menu-btn md:hidden text-white text-2xl">☰</button>
+      </div>
     </div>
 
-    <div id="mobile-menu" class="hidden bg-white/90 backdrop-blur p-4">
+    <div class="mobile-menu hidden bg-white/90 backdrop-blur p-4">
       <a href="index.html" class="block py-2 text-purple-900">Home</a>
       <a href="about.html" class="block py-2 text-purple-900">About</a>
       <a href="internships.html" class="block py-2 text-purple-900">Internships</a>
@@ -40,14 +43,14 @@
   <main class="pt-28">
 
     <section class="container mx-auto px-6 py-10">
-      <h1 class="text-3xl md:text-4xl font-bold text-center text-purple-900">Meet the Team</h1>
-      <p class="mt-3 text-center text-white/90 max-w-2xl mx-auto">A small, focused team committed to mentoring and building learning experiences.</p>
+      <h1 class="text-3xl md:text-4xl font-bold text-center text-white">Meet the Team</h1>
+      <p class="mt-3 text-center text-white/90 max-w-2xl mx-auto">A focused team committed to mentoring and building learning experiences.</p>
 
       <div class="mt-8 grid md:grid-cols-3 gap-6">
         <!-- Founder -->
         <div class="glass p-6 text-center">
           <div class="h-28 w-28 mx-auto rounded-full bg-white/10 flex items-center justify-center text-2xl font-bold text-white">CK</div>
-          <h3 class="mt-4 font-semibold text-purple-900">Chandru K</h3>
+          <h3 class="mt-4 font-semibold text-white">Chandru K</h3>
           <p class="text-white/90">Founder & CEO</p>
           <p class="mt-3 text-sm text-white/80">Visionary and mentor focused on practical learning.</p>
         </div>
@@ -55,7 +58,7 @@
         <!-- Program Manager -->
         <div class="glass p-6 text-center">
           <div class="h-28 w-28 mx-auto rounded-full bg-white/10 flex items-center justify-center text-2xl font-bold text-white">PM</div>
-          <h3 class="mt-4 font-semibold text-purple-900">Program Manager</h3>
+          <h3 class="mt-4 font-semibold text-white">Program Manager</h3>
           <p class="text-white/90">Program Manager</p>
           <p class="mt-3 text-sm text-white/80">Designs curriculum and coordinates mentorship.</p>
         </div>
@@ -63,7 +66,7 @@
         <!-- Technical Lead -->
         <div class="glass p-6 text-center">
           <div class="h-28 w-28 mx-auto rounded-full bg-white/10 flex items-center justify-center text-2xl font-bold text-white">TL</div>
-          <h3 class="mt-4 font-semibold text-purple-900">Technical Lead</h3>
+          <h3 class="mt-4 font-semibold text-white">Technical Lead</h3>
           <p class="text-white/90">Technical Lead</p>
           <p class="mt-3 text-sm text-white/80">Ensures code quality and technical mentorship.</p>
         </div>
@@ -72,22 +75,22 @@
 
     <!-- CORE VALUES -->
     <section class="container mx-auto px-6 py-8">
-      <h2 class="text-2xl font-bold text-center text-purple-900">Core Values</h2>
+      <h2 class="text-2xl font-bold text-center text-white">Core Values</h2>
       <div class="mt-6 grid md:grid-cols-4 gap-6">
         <div class="glass p-4 text-center">
-          <h4 class="font-semibold text-purple-900">Innovation</h4>
+          <h4 class="font-semibold text-white">Innovation</h4>
           <p class="mt-2 text-white/90 text-sm">We encourage creative problem solving.</p>
         </div>
         <div class="glass p-4 text-center">
-          <h4 class="font-semibold text-purple-900">Collaboration</h4>
+          <h4 class="font-semibold text-white">Collaboration</h4>
           <p class="mt-2 text-white/90 text-sm">We learn and build together.</p>
         </div>
         <div class="glass p-4 text-center">
-          <h4 class="font-semibold text-purple-900">Growth</h4>
+          <h4 class="font-semibold text-white">Growth</h4>
           <p class="mt-2 text-white/90 text-sm">Continuous improvement for learners and mentors.</p>
         </div>
         <div class="glass p-4 text-center">
-          <h4 class="font-semibold text-purple-900">Integrity</h4>
+          <h4 class="font-semibold text-white">Integrity</h4>
           <p class="mt-2 text-white/90 text-sm">We act with honesty and responsibility.</p>
         </div>
       </div>
